@@ -1,0 +1,21 @@
+{
+  "name": "estateexplorer",
+  "version": "1.0.0",
+  "description": "Estate Explorer with Figma MCP integration",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mcp:figma": "npx -y mcp-figma",
+    "setup": "cp .env.example .env && echo 'Please edit .env with your Figma access token'"
+  },
+  "keywords": [
+    "figma",
+    "mcp",
+    "estate"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mcp-figma": "^0.1.1"
+  }
+}
