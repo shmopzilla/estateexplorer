@@ -50,19 +50,29 @@ To use the Figma MCP server with Claude Code, you need to add the configuration 
 
 #### For Claude Code CLI:
 
-Use the provided `mcp-config.json` in this repository:
+This repository includes a `.mcp.json` file for Claude Code CLI integration:
 
-1. Copy `.env.example` to `.env`:
+1. **Set up your environment variable**:
    ```bash
-   cp .env.example .env
+   # Export the Figma token from .env
+   export FIGMA_ACCESS_TOKEN=your_figma_token_here
    ```
 
-2. Edit `.env` and add your Figma access token:
-   ```
-   FIGMA_ACCESS_TOKEN=your_actual_token_here
+2. **The `.mcp.json` file is already configured** in this repository:
+   - Location: `/home/user/estateexplorer/.mcp.json`
+   - It references the `FIGMA_ACCESS_TOKEN` environment variable
+   - The MCP server will automatically load when you start Claude Code
+
+3. **Verify MCP server is connected**:
+   ```bash
+   claude mcp list
+   claude mcp get figma
    ```
 
-3. The MCP server configuration is in `mcp-config.json`
+4. **Alternative: Use the setup script**:
+   ```bash
+   source .env  # Load environment variables
+   ```
 
 ### 4. Verify the Connection
 
